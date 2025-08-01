@@ -48,6 +48,21 @@ module.exports = defineConfig({
       }
     },
     {
+      resolve: '@medusajs/medusa/tax',
+      options: {
+        providers: [
+          {
+            resolve: '@mercurjs/stripe-tax-provider',
+            id: 'stripe-tax-provider',
+            options: {
+              apiKey: process.env.STRIPE_SECRET_API_KEY,
+              defaultTaxcode: 'txcd_99999999'
+            }
+          }
+        ]
+      }
+    },
+    {
       resolve: '@medusajs/medusa/payment',
       options: {
         providers: [

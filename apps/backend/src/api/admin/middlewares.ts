@@ -5,6 +5,7 @@ import { commissionMiddlewares } from './commission/middlewares'
 import { configurationMiddleware } from './configuration/middlewares'
 import { orderSetsMiddlewares } from './order-sets/middlewares'
 import { adminProductsMiddlewares } from './products/middlewares'
+import { adminRegionsMiddlewares } from './regions/middlewares'
 import { requestsMiddlewares } from './requests/middlewares'
 import { returnRequestsMiddlewares } from './return-request/middlewares'
 import { reviewsMiddlewares } from './reviews/middlewares'
@@ -19,5 +20,6 @@ export const adminMiddlewares: MiddlewareRoute[] = [
   ...sellerMiddlewares,
   ...reviewsMiddlewares,
   ...attributeMiddlewares,
-  ...adminProductsMiddlewares
+  ...adminProductsMiddlewares,
+  ...adminRegionsMiddlewares
 ]
